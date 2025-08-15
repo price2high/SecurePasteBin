@@ -1,7 +1,7 @@
 # Install
 
 ## Option A — Portable EXE (no install)
-1) Download `SecurePasteP2P.exe` from the Releases page.
+1) Download `SecurePasteP2P.exe` from the [Releases](https://github.com/price2high/SecurePasteBin/releases/tag/v1.0.0) page.
 2) Double-click to run.
 
 ## Option B — Windows Installer (recommended for non-technical users)
