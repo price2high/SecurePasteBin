@@ -1,0 +1,57 @@
+name: Release (Windows)
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+      - name: Build EXE
+        run: |
+          pyinstaller --onefile --noconsole --name SecurePasteP2P --icon app.ico secure_pastebin_p2p.py
+      - name: Install Inno Setup
+        run: choco install innosetup --no-progress -y
+      - name: Build Installer
+        run: |
+          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+      - name: Zip Installer
+        run: |
+          powershell -Command "New-Item -ItemType Directory -Force -Path release | Out-Null"
+          powershell -Command "Compress-Archive -Path output\SecurePasteP2P-Lilac-Setup.exe -DestinationPath release\SecurePasteP2P-Lilac-Setup.zip -Force"
+      - name: Checksums
+        shell: pwsh
+        run: |
+          Get-FileHash dist\SecurePasteP2P.exe -Algorithm SHA256 | % { $_.Hash + "  dist/SecurePasteP2P.exe" } | Set-Content SHA256SUMS.txt -Encoding ascii
+          Get-FileHash output\SecurePasteP2P-Lilac-Setup.exe -Algorithm SHA256 | % { $_.Hash + "  output/SecurePasteP2P-Lilac-Setup.exe" } | Add-Content -Encoding ascii -Path SHA256SUMS.txt
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          body: |
+            # Secure Paste P2P — Lilac Princess Edition 👑✨
+
+            Tiny Windows app for serverless secret sharing. Encrypt locally → share a blob/QR → 
+            decrypt with **base key + role** — no server.
+
+            ## Downloads
+            - **Portable EXE:** `SecurePasteP2P.exe`
+            - **Installer:** `SecurePasteP2P-Lilac-Setup.exe`
+            - **Installer (.zip)** and `SHA256SUMS.txt` attached
+
+            See README for usage.
+          files: |
+            dist/SecurePasteP2P.exe
+            output/SecurePasteP2P-Lilac-Setup.exe
+            release/SecurePasteP2P-Lilac-Setup.zip
+            SHA256SUMS.txt
