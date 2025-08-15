@@ -18,14 +18,15 @@
 ### Create venv & run from source
 ```powershell
 python -m venv venv
-.env\Scripts\Activate
-pip install -r .equirements.txt
+venv\Scripts\Activate
+pip install -r .
+equirements.txt
 python .\secure_pastebin_p2p.py
 ```
 
 ### Build portable EXE
 ```powershell
-.uild_exe.bat
+build_exe.bat
 # → dist\SecurePasteP2P.exe
 ```
 
