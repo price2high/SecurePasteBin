@@ -24,11 +24,11 @@ can decrypt it — all **without a server**.
 ---
 
 ## Sneak Peek
-(see more in **[Screenshots](docs/SCREENSHOTS.md)**)
+(see more in **[Screenshots](https://github.com/price2high/SecurePasteBin/blob/main/SCREENSHOTS.md)**)
 
-![Encrypt](docs/images/01-screenshot.png)
-![Decrypt](docs/images/02-screenshot.png)
-![App Search](docs/images/03-screenshot.png)
+![Encrypt](https://github.com/price2high/SecurePasteBin/blob/main/07-screenshot.png)
+![Decrypt](https://github.com/price2high/SecurePasteBin/blob/main/06-screenshot.png)
+![App Search](https://github.com/price2high/SecurePasteBin/blob/main/01-screenshot.png)
 
 ---
 
