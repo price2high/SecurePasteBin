@@ -3,14 +3,14 @@
 ## Dev Run
 ```powershell
 python -m venv venv
-.env\Scripts\Activate
+venv\Scripts\Activate
 pip install -r requirements.txt
 python secure_pastebin_p2p.py
 ```
 
 ## Portable EXE
 ```powershell
-.uild_exe.bat
+build_exe.bat
 # → dist\SecurePasteP2P.exe
 ```
 
