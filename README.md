@@ -13,7 +13,7 @@ can decrypt it — all **without a server**.
 
 ## Quick Start (Windows)
 
-1. **Download & run** the installer or portable EXE (see **[Install](docs/INSTALL.md)**).
+1. **Download & run** the installer or portable EXE (see **[Install](https://github.com/price2high/SecurePasteBin/blob/main/INSTALL.md)**).
 2. **Encrypt tab** → write secret → set role (e.g., `admin`) → **Create Blob**.
    - Share the **blob** (text/QR/`.spaste`) with the recipient.
    - Share the **base key** using a separate channel (phone/SMS).
@@ -50,16 +50,16 @@ can decrypt it — all **without a server**.
 
 ## Docs
 
-- **[Install](docs/INSTALL.md)** — EXE, installer, and source build steps
-- **[Usage](docs/USAGE.md)** — encrypt, decrypt, QR, file workflows
-- **[Security Model](docs/SECURITY.md)** — HKDF + Fernet design, limitations
-- **[Threat Model](docs/THREAT_MODEL.md)** — risks & mitigations
-- **[Build](docs/BUILD.md)** — PyInstaller & Inno Setup, code signing
-- **[Troubleshooting](docs/TROUBLESHOOTING.md)** — common issues & fixes
-- **[FAQ](docs/FAQ.md)** — quick answers
-- **[Roadmap](docs/ROADMAP.md)** — planned enhancements
-- **[Contributing](docs/CONTRIBUTING.md)**, **[Code of Conduct](docs/CODE_OF_CONDUCT.md)**
-- **[Changelog](docs/CHANGELOG.md)** — 2025-08-15
+- **[Install](https://github.com/price2high/SecurePasteBin/blob/main/INSTALL.md)** — EXE, installer, and source build steps
+- **[Usage](https://github.com/price2high/SecurePasteBin/blob/main/USAGE.md)** — encrypt, decrypt, QR, file workflows
+- **[Security Model](https://github.com/price2high/SecurePasteBin/blob/main/SECURITY.md)** — HKDF + Fernet design, limitations
+- **[Threat Model](https://github.com/price2high/SecurePasteBin/blob/main/THREAT_MODEL.md)** — risks & mitigations
+- **[Build](https://github.com/price2high/SecurePasteBin/blob/main/BUILD.md)** — PyInstaller & Inno Setup, code signing
+- **[Troubleshooting](https://github.com/price2high/SecurePasteBin/blob/main/TROUBLESHOOTING.md)** — common issues & fixes
+- **[FAQ](https://github.com/price2high/SecurePasteBin/blob/main/FAQ.md)** — quick answers
+- **[Roadmap](https://github.com/price2high/SecurePasteBin/blob/main/FAQ.md)** — planned enhancements
+- **[Contributing](https://github.com/price2high/SecurePasteBin/blob/main/CONTRIBUTING.md)**, **[Code of Conduct](https://github.com/price2high/SecurePasteBin/blob/main/CODE_OF_CONDUCT.md)**
+- **[Changelog](https://github.com/price2high/SecurePasteBin/blob/main/CHANGELOG.md)** — 2025-08-15
 
 ---
 
